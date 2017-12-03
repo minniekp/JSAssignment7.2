@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Helpful notes</title>
+</head>
+<body>
+   
+<h2 align="center">Helpful Notes will appear here</h2>
+
+<form action="#" name="Helpful Notes" >
+
+<table cellpadding="2" width="50%"  align="center" cellspacing="2">
+
+<tr>
+<td><font color="black">Name</font></td>
+<td><input type="text" name="textnames" id="textname" size="30"></td>
+</tr>
+
+<tr>
+	<td><font color="black">E-mail</font></td>
+	<td><input type="text" name="email" id="email" size="30"></td>
+</tr>
+
+<tr>
+	<td><font color="black">City</font></td>
+	<td><input type="text" name="city" id="city" size="30"></td>
+</tr>
+
+<tr>
+	<td><font colot="black">Age</font></td>
+	<td><input type="text" name="Age" id="age" size="30"></td>
+</tr>
+
+<script type="text/javascript">
+	window.onload = function() {
+		var myform = document.getElementsByTagName('form')[0];
+		var inputs = document.querySelectorAll('input');
+
+		inputs.forEach(function(element) {
+			element.onclick = function(event) {
+				var nameAttr = event.srcElement.textname;
+				document.getElementById('textname').placeholder = "Enter your" + nameAttr;
+
+				var EmailAttr = event.srcElement.email;
+				document.getElementById('email').placeholder = "Enter your" + EmailAttr;
+
+				var CityAttr = event.srcElement.city;
+				document.getElementById('city').placeholder = "Enter your" + CityAttr;
+
+				var AgeAttr =  event.srcElement.age;
+				document.getElementById('age').placeholder = "Enter your" + AgeAttr;
+
+			}
+		}
+	}
+</script>
+
+
+
+</body>
+</html>
